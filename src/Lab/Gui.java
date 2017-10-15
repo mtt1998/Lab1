@@ -180,3 +180,4 @@ class MyFrame extends Frame{
 		}
 	}
 }
+//add line2 in B2
