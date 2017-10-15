@@ -1,5 +1,5 @@
 package Lab;
-//23
+
 import Lab.Main;
 import Lab.Graph;
 import java.awt.*;
