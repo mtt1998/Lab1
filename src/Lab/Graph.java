@@ -2,6 +2,7 @@ package Lab;
 import java.util.*;
 import java.awt.*;
 import java.lang.*;
+//add line2 in B1
 class Vertex{
 	private String name;
 	private int id;

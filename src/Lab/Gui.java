@@ -5,6 +5,7 @@ import java.awt.*;
 import java.awt.event.*;
 import java.io.File;
 import javax.swing.*;
+//add line3 in B1
 class MyThread extends Thread{
 	String path;
 	MyFrame fr;
