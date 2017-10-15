@@ -2,6 +2,7 @@ package Lab;
 import java.util.*;
 import java.awt.*;
 //tset
+//b2t
 import java.lang.*;
 class Vertex{
 	private String name;
