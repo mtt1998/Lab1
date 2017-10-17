@@ -6,6 +6,9 @@ import javax.swing.*;
 import Lab.Graph;
 import graph.GraphViz;
 public class Main {
+//	public static void main(String[] args) {
+//		System.out.println("fdas");
+//	}
 	Graph createDirectedGraph(String filename){
 		FileReader freader = null;
 		int ch = -1;
@@ -103,8 +106,7 @@ public class Main {
 				bridge = queryBridgeWords(G, word1, arr[i]);
 				if(bridge.charAt(0) == 'T'){
 					String[] bridgewords = bridge.substring(bridge.lastIndexOf(':') + 1).split(" "); //???
-					Random random = new Random();
-					int j = random.nextInt() % bridgewords.length;
+					int j = new Random().nextInt(bridgewords.length);
 					res.append(bridgewords[j] + " ");
 				}
 				res.append(arr[i]);

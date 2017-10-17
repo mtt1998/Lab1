@@ -125,10 +125,13 @@ class MyFrame extends Frame{
 
 	class MyMonitor implements ActionListener{
 		public void actionPerformed(ActionEvent e){
+			if (th!=null) {
+				th.stop();
+			}
 			if(e.getActionCommand().equals("Graph")){
 				JFileChooser jfc = new JFileChooser();
 				jfc.setFileSelectionMode(JFileChooser.FILES_ONLY);
-				jfc.showDialog(new JLabel(), "Ñ¡Ôñ");
+				jfc.showDialog(new JLabel(), "Ñ¡ï¿½ï¿½");
 				File file = jfc.getSelectedFile();
 				if(file != null)
 					G = control.createDirectedGraph(file.getAbsolutePath());
@@ -168,6 +171,7 @@ class MyFrame extends Frame{
 				}
 			}else if(e.getActionCommand().equals("Random walk")){
 				if(G != null){
+
 					th = new MyThread(MyFrame.this,control.randomWalk(G));
 					th.start();
 				}
