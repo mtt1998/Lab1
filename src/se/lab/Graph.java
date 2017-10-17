@@ -1,111 +1,13 @@
-package Lab;
-
-import java.util.*;
-import java.awt.*;
-import java.lang.*;
-
-class Vertex {
-  private String name;
-  private int id;
-  private int deg;
-  boolean vis;
-
-  Vertex(String s, int id) {
-    this.name = s;
-    this.id = id;
-    this.deg = 0;
-    this.vis = false;
-  }
-
-  public String getName() {
-    return name;
-  }
-
-  public int getId() {
-    return id;
-  }
-
-  public int getDeg() {
-    return deg;
-  }
-
-  public boolean getStatus() {
-    return vis;
-  }
-
-  public void addDeg() {
-    deg++;
-  }
-
-  public void changeStatus(boolean s) {
-    vis = s;
-  }
-
-  @Override
-  public int hashCode() {
-    return name.hashCode();
-  }
-
-  @Override
-  public boolean equals(Object o) {
-    if (o instanceof Vertex) {
-      Vertex v = (Vertex) o;
-      return name.equals(v.name);
-    }
-    return super.equals(o);
-  }
-}
-
-
-class Edge {
-  // private int to;
-  private Vertex from;
-  private Vertex to;
-  private int w;
-  private boolean vis;
-
-  Edge(Vertex from, Vertex to) {
-    this.from = from;
-    this.to = to;
-    w = 1;
-    vis = false;
-  }
-
-  public String getDot() {
-    StringBuilder res = new StringBuilder(from.getName());
-    res.append("->");
-    res.append(to.getName());
-    res.append(" [label = " + w + "];\n");
-    return res.toString();
-  }
-
-  public void addW() {
-    w++;
-  }
-
-  public int getW() {
-    return w;
-  }
-
-  public boolean getStatus() {
-    return vis;
-  }
-
-  public void changeStatus(boolean s) {
-    vis = s;
-  }
-
-  public Vertex getTo() {
-    return to;
-  }
-}
-
+package se.lab;
 
 public class Graph {
   int vertexNum;
   Vertex[] vertexs = new Vertex[100]; // most 100 point
   Edge[][] edges = new Edge[100][100]; // edge[i][j] from i to edges[i][j].to.id
 
+  /**
+   * set edges and vertexs status to false.
+   */
   public void init() {
     Vertex u = null;
     for (int i = 0; i < vertexNum; i++) {
@@ -117,6 +19,11 @@ public class Graph {
     }
   }
 
+  /**
+   * existNode.
+   * @param word word
+   * @return existNode
+   */
   public int existNode(String word) {
     word = word.toLowerCase();
     char[] trans = word.toCharArray();
@@ -133,12 +40,18 @@ public class Graph {
     }
     String name = new String(trans, 0, len);
     for (int i = 0; i < vertexNum; i++) {
-      if (name.equals(vertexs[i].getName()))
+      if (name.equals(vertexs[i].getName())) {
         return i;
+      }
     }
     return -1;
   }
 
+  /**
+   * addNode.
+   * @param word word
+   * @return vertex
+   */
   public Vertex addNode(String word) {
     word = word.toLowerCase();
     char[] trans = word.toCharArray();
@@ -165,6 +78,11 @@ public class Graph {
     return res;
   }
 
+  /**
+   * addEdge.
+   * @param word1 endpoint
+   * @param word2 endpoint
+   */
   public void addEdge(String word1, String word2) {
     Vertex u = addNode(word1);
     Vertex v = addNode(word2);
@@ -182,6 +100,10 @@ public class Graph {
     }
   }
 
+  /**
+   * getDot.
+   * @return result
+   */
   public String getDot() {
     StringBuilder res = new StringBuilder();
     for (int i = 0; i < vertexNum; i++) {
@@ -193,10 +115,18 @@ public class Graph {
     return res.toString();
   }
 
+  /**
+   * Dijkstra short way.
+   * @param word ??
+   * @param dist ??
+   * @param bfnode ??
+   * @return if the way exist
+   */
   public boolean dijkstra(String word, int[] dist, int[] bfnode) {
     int idst = existNode(word);
-    if (idst == -1)
+    if (idst == -1) {
       return false;
+    }
     init();
     for (int i = 0; i < vertexNum; i++) {
       dist[i] = 10000; // inf = 10000;

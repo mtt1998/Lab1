@@ -1,23 +1,21 @@
-// add line in step 4
-package Lab;
+package se.lab;
 
-import java.io.*;
-import java.util.*;
-import javax.swing.*;
-import Lab.Graph;
-import graph.GraphViz;
+import java.io.File;
+import java.io.FileReader;
+import java.util.Random;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import se.graph.GraphViz;
 
 public class Main {
-  // public static void main(String[] args) {
-  // System.out.println("fdas");
-  // }
   Graph createDirectedGraph(String filename) {
     FileReader freader = null;
     int ch = -1;
-    Graph G = null;
+    Graph graph = null;
     try {
       freader = new FileReader(filename);
-      G = new Graph();
+      graph = new Graph();
 
       String u = null;
       StringBuffer chbuf = new StringBuffer(50);
@@ -25,9 +23,9 @@ public class Main {
         if (ch == 32 || ch == 46 || ch == 33 || ch == 44 || ch == 63 || ch == 10 || ch == 13) {
           if (chbuf.length() != 0) {
             if (u == null) {
-              G.addNode(chbuf.toString());
+              graph.addNode(chbuf.toString());
             } else {
-              G.addEdge(u, chbuf.toString());
+              graph.addEdge(u, chbuf.toString());
             }
             u = chbuf.toString();
             chbuf.setLength(0);
@@ -38,9 +36,9 @@ public class Main {
       }
       if (chbuf.length() != 0) {
         if (u != null) {
-          G.addEdge(u, chbuf.toString());
+          graph.addEdge(u, chbuf.toString());
         } else {
-          G.addNode(chbuf.toString());
+          graph.addNode(chbuf.toString());
         }
       }
 
@@ -49,14 +47,14 @@ public class Main {
       System.out.println("cannot read the file normally");
       e.printStackTrace();
     }
-    return G;
+    return graph;
   }
 
   // explain the graph and save as out.jpg
-  void showDirectedGraph(Graph G) {
+  void showDirectedGraph(Graph graph) {
     GraphViz gv = new GraphViz();
     gv.addln(gv.start_graph());
-    gv.add(G.getDot());
+    gv.add(graph.getDot());
     gv.add(gv.end_graph());
     gv.increaseDpi();
     String type = "jpg";
@@ -73,9 +71,9 @@ public class Main {
 
   }
 
-  String queryBridgeWords(Graph G, String word1, String word2) {
-    int idu = G.existNode(word1);
-    int idv = G.existNode(word2);
+  String queryBridgeWords(Graph graph, String word1, String word2) {
+    int idu = graph.existNode(word1);
+    int idv = graph.existNode(word2);
     if (idu == -1 && idv == -1) {
       return "No \"" + word1 + "\" and \"" + word2 + "\" in the graph!";
     } else if (idu == -1) {
@@ -84,10 +82,10 @@ public class Main {
       return "No \"" + word2 + "\" in the graph!";
     } else {
       StringBuilder res = new StringBuilder("");
-      for (int i = 0; i < G.vertexs[idu].getDeg(); i++) {
-        Vertex bridge = G.edges[idu][i].getTo();
+      for (int i = 0; i < graph.vertexs[idu].getDeg(); i++) {
+        Vertex bridge = graph.edges[idu][i].getTo();
         for (int j = 0; j < bridge.getDeg(); j++) {
-          if (G.edges[bridge.getId()][j].getTo().getId() == idv) {
+          if (graph.edges[bridge.getId()][j].getTo().getId() == idv) {
             res.append(bridge.getName() + " ");
           }
         }
@@ -99,7 +97,7 @@ public class Main {
     }
   }
 
-  String generateNewText(Graph G, String inputText) {
+  String generateNewText(Graph graph, String inputText) {
     String[] arr = inputText.split(" ");
     StringBuilder res = new StringBuilder("");
     if (arr != null) {
@@ -108,7 +106,7 @@ public class Main {
       res.append(word1);
       for (int i = 1; i < arr.length; i++) {
         res.append(" ");
-        bridge = queryBridgeWords(G, word1, arr[i]);
+        bridge = queryBridgeWords(graph, word1, arr[i]);
         if (bridge.charAt(0) == 'T') {
           String[] bridgewords = bridge.substring(bridge.lastIndexOf(':') + 1).split(" "); // ???
           int j = new Random().nextInt(bridgewords.length);
@@ -121,7 +119,7 @@ public class Main {
     return res.toString();
   }
 
-  void showPathInGraph(Graph G, String paths) {
+  void showPathInGraph(Graph graph, String paths) {
     String[] colors = {"blue", "red", "yellow", "gold", "green", "pink", "aliceblue", "violet",
         "pink", "darkgrey", "brown", "darkorange", "antiquewhite", "aqua", "aquamarine", "azure",
         "beige", "bisque", "black", "blanchedalmond", "blueviolet", "burlywood", "cadetblue",
@@ -136,11 +134,12 @@ public class Main {
     int colorindex = 0;
     GraphViz gv = new GraphViz();
     gv.addln(gv.start_graph());
-    gv.add(G.getDot());
+    gv.add(graph.getDot());
     for (String p : path) {
       String[] nodes = p.split(" ");
-      if (p.length() == 0)
+      if (p.length() == 0) {
         continue;
+      }
       u = nodes[0];
       for (int i = 1; i < nodes.length - 1; i++) {
         v = nodes[i];
@@ -148,8 +147,9 @@ public class Main {
         u = v;
       }
       colorindex++;
-      if (colorindex == colors.length)
+      if (colorindex == colors.length) {
         colorindex = 0;
+      }
     }
     gv.add(gv.end_graph());
     gv.increaseDpi();
@@ -161,14 +161,15 @@ public class Main {
     myframe.pack();
   }
 
-  String calcShortestPath(Graph G, String word1, String word2) {
-    int idst = G.existNode(word1);
-    int idend = G.existNode(word2);
-    if (idend == -1 || idst == -1)
+  String calcShortestPath(Graph graph, String word1, String word2) {
+    int idst = graph.existNode(word1);
+    int idend = graph.existNode(word2);
+    if (idend == -1 || idst == -1) {
       return "";
+    }
     int[] dist = new int[100]; // vertexNum < 100
     int[] bfnode = new int[100]; // vertexNum < 100
-    G.dijkstra(word1, dist, bfnode);
+    graph.dijkstra(word1, dist, bfnode);
     int[] stk = new int[100]; // vertexNum < 100;
     int top = -1;
     int now = idend;
@@ -178,7 +179,7 @@ public class Main {
     }
     StringBuilder res = new StringBuilder();
     while (top != -1) {
-      res.append(G.vertexs[stk[top--]].getName());
+      res.append(graph.vertexs[stk[top--]].getName());
       res.append(" ");
     }
     res.append(dist[idend]);
@@ -186,14 +187,14 @@ public class Main {
     return res.toString();
   }
 
-  String showAllShortestPath(Graph G, String word) {
+  String showAllShortestPath(Graph graph, String word) {
     int[] dist = new int[100]; // vertexNum < 100
     int[] bfnode = new int[100]; // vertexNum < 100
-    G.dijkstra(word, dist, bfnode);
+    graph.dijkstra(word, dist, bfnode);
     int[] stk = new int[100]; // vertexNum < 100;
     int top = -1;
     StringBuilder res = new StringBuilder();
-    for (int idend = 0; idend < G.vertexNum; idend++) {
+    for (int idend = 0; idend < graph.vertexNum; idend++) {
       top = -1;
       int now = idend;
       while (now != -1) {
@@ -201,7 +202,7 @@ public class Main {
         now = bfnode[now];
       }
       while (top != -1) {
-        res.append(G.vertexs[stk[top--]].getName());
+        res.append(graph.vertexs[stk[top--]].getName());
         res.append(" ");
       }
       res.append(dist[idend]);
@@ -210,16 +211,17 @@ public class Main {
     return res.toString();
   }
 
-  String randomWalk(Graph G) {
-    G.init();
+  String randomWalk(Graph graph) {
+    graph.init();
     Random random = new Random();
-    Vertex u = G.vertexs[random.nextInt(G.vertexNum)];
+    Vertex u = graph.vertexs[random.nextInt(graph.vertexNum)];
     StringBuilder res = new StringBuilder(u.getName());
     Edge e = null;
     while (true) {
-      if (u.getDeg() == 0)
+      if (u.getDeg() == 0) {
         break;
-      e = G.edges[u.getId()][random.nextInt(u.getDeg())];
+      }
+      e = graph.edges[u.getId()][random.nextInt(u.getDeg())];
       u = e.getTo();
       res.append(" ");
       res.append(u.getName());

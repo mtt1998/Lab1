@@ -1,4 +1,4 @@
-package graph;
+package se.graph;
 
 /* $Id$ */
 /*
@@ -26,12 +26,11 @@ public class GraphViz {
   /**
    * Detects the client's operating system.
    */
-  private final static String osName = System.getProperty("os.name").replaceAll("\\s", "");
+  private static final  String osName = System.getProperty("os.name").replaceAll("\\s", "");
 
   /**
    * The image size in dpi. 96 dpi is normal size. Higher values are 10% higher each. Lower values
    * 10% lower each.
-   *
    * dpi patch by Peter Mueller
    */
   private final int[] dpiSizes =
@@ -93,8 +92,7 @@ public class GraphViz {
   }
 
   /**
-   * Configurable Constructor with path to executable dot and a temp dir
-   *
+   * Configurable Constructor with path to executable dot and a temp dir.
    * @param executable absolute path to dot executable
    * @param tempDir absolute path to temp directory
    */
@@ -140,7 +138,7 @@ public class GraphViz {
   /**
    * Returns the graph as an image in binary format.
    * 
-   * @param dot_source Source of the graph to be drawn.
+   * @param dotSource Source of the graph to be drawn.
    * @param type Type of the output image to be produced, e.g.: gif, dot, fig, pdf, ps, svg, png.
    * @param representationType Type of how you want to represent the graph:
    *        <ul>
@@ -154,18 +152,18 @@ public class GraphViz {
    * @see http://www.graphviz.org under the Roadmap title
    * @return A byte array containing the image of the graph.
    */
-  public byte[] getGraph(String dot_source, String type, String representationType) {
+  public byte[] getGraph(String dotSource, String type, String representationType) {
     File dot;
-    byte[] img_stream = null;
+    byte[] imgStream = null;
 
     try {
-      dot = writeDotSourceToFile(dot_source);
+      dot = writeDotSourceToFile(dotSource);
       if (dot != null) {
-        img_stream = get_img_stream(dot, type, representationType);
+        imgStream = get_imgStream(dot, type, representationType);
         if (dot.delete() == false) {
           System.err.println("Warning: " + dot.getAbsolutePath() + " could not be deleted!");
         }
-        return img_stream;
+        return imgStream;
       }
       return null;
     } catch (java.io.IOException ioe) {
@@ -220,9 +218,9 @@ public class GraphViz {
    * @see http://www.graphviz.org under the Roadmap title
    * @return The image of the graph in .gif format.
    */
-  private byte[] get_img_stream(File dot, String type, String representationType) {
+  private byte[] get_imgStream(File dot, String type, String representationType) {
     File img;
-    byte[] img_stream = null;
+    byte[] imgStream = null;
 
     try {
       img = File.createTempFile("graph_", "." + type, new File(this.tempDir));
@@ -237,8 +235,8 @@ public class GraphViz {
       p.waitFor();
 
       FileInputStream in = new FileInputStream(img.getAbsolutePath());
-      img_stream = new byte[in.available()];
-      in.read(img_stream);
+      imgStream = new byte[in.available()];
+      in.read(imgStream);
       // Close it if we need to
       if (in != null) {
         in.close();
@@ -256,7 +254,7 @@ public class GraphViz {
       ie.printStackTrace();
     }
 
-    return img_stream;
+    return imgStream;
   }
 
   /**
