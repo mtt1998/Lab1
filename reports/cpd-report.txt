@@ -1,0 +1,67 @@
+Found a 15 line (124 tokens) duplication in the following files: 
+Starting at line 27 of /home/kkcckc/eclipse-workspace/Lab4/src/se/lab/Graph.java
+Starting at line 55 of /home/kkcckc/eclipse-workspace/Lab4/src/se/lab/Graph.java
+
+  public int existNode(String word) {
+    word = word.toLowerCase();
+    char[] trans = word.toCharArray();
+    int len = word.length();
+    if (word.endsWith("ing")) {
+      len = len - 3;
+    } else if (word.endsWith("ied") || word.endsWith("ies")) {
+      len = len - 2;
+      trans[len - 1] = 'y';
+    } else if (word.endsWith("ed")) {
+      len = len - 2;
+    } else if (word.endsWith("s")) {
+      len = len - 1;
+    }
+    String name = new String(trans, 0, len);
+=====================================================================
+Found a 6 line (49 tokens) duplication in the following files: 
+Starting at line 181 of /home/kkcckc/eclipse-workspace/Lab4/src/se/lab/Main.java
+Starting at line 204 of /home/kkcckc/eclipse-workspace/Lab4/src/se/lab/Main.java
+
+    while (top != -1) {
+      res.append(graph.vertexs[stk[top--]].getName());
+      res.append(" ");
+    }
+    res.append(dist[idend]);
+    res.append("\n");
+=====================================================================
+Found a 4 line (42 tokens) duplication in the following files: 
+Starting at line 148 of /home/kkcckc/eclipse-workspace/Lab4/src/se/lab/MyFrame.java
+Starting at line 163 of /home/kkcckc/eclipse-workspace/Lab4/src/se/lab/MyFrame.java
+
+      } else if (e.getActionCommand().equals("query")) {
+        String word1 = tfword1.getText();
+        String word2 = tfword2.getText();
+        if (graph != null && word1.length() != 0 && word2.length() != 0) {
+=====================================================================
+Found a 4 line (31 tokens) duplication in the following files: 
+Starting at line 65 of /home/kkcckc/eclipse-workspace/Lab4/src/se/lab/Main.java
+Starting at line 156 of /home/kkcckc/eclipse-workspace/Lab4/src/se/lab/Main.java
+
+    JFrame myframe = new JFrame("Graph");
+    JLabel mylabel = new JLabel();
+    myframe.setVisible(true);
+    mylabel.setIcon(new ImageIcon(gv.getGraph(gv.getDotSource(), type, repesentationType)));
+=====================================================================
+Found a 6 line (30 tokens) duplication in the following files: 
+Starting at line 174 of /home/kkcckc/eclipse-workspace/Lab4/src/se/lab/Main.java
+Starting at line 198 of /home/kkcckc/eclipse-workspace/Lab4/src/se/lab/Main.java
+
+    int top = -1;
+    int now = idend;
+    while (now != -1) {
+      stk[++top] = now;
+      now = bfnode[now];
+    }
+=====================================================================
+Found a 3 line (27 tokens) duplication in the following files: 
+Starting at line 55 of /home/kkcckc/eclipse-workspace/Lab4/src/se/lab/Main.java
+Starting at line 135 of /home/kkcckc/eclipse-workspace/Lab4/src/se/lab/Main.java
+
+    GraphViz gv = new GraphViz();
+    gv.addln(gv.start_graph());
+    gv.add(graph.getDot());

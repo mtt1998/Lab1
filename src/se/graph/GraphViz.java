@@ -14,6 +14,7 @@ package se.graph;
  ******************************************************************************
  */
 
+
 import java.io.BufferedReader;
 import java.io.DataInputStream;
 import java.io.File;
@@ -21,17 +22,21 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 
 public class GraphViz {
+  static final Logger LOGGER = Logger.getLogger(GraphViz.class.getName());
   /**
    * Detects the client's operating system.
    */
-  private static final  String osName = System.getProperty("os.name").replaceAll("\\s", "");
+  private final static String OSNAME = System.getProperty("os.name").replaceAll("\\s", "");
 
   /**
    * The image size in dpi. 96 dpi is normal size. Higher values are 10% higher each. Lower values
-   * 10% lower each.
-   * dpi patch by Peter Mueller
+   * 10% lower each. dpi patch by Peter Mueller
    */
   private final int[] dpiSizes =
       {46, 51, 57, 63, 70, 78, 86, 96, 106, 116, 128, 141, 155, 170, 187, 206, 226, 249};
@@ -79,13 +84,13 @@ public class GraphViz {
    * = /tmp
    */
   public GraphViz() {
-    if (GraphViz.osName.contains("Windows")) {
+    if (GraphViz.OSNAME.contains("Windows")) {
       this.tempDir = "e:/graphviz/temp";
       this.executable = "e:/graphviz/bin/dot.exe";
-    } else if (GraphViz.osName.equals("MacOSX")) {
+    } else if (GraphViz.OSNAME.equals("MacOSX")) {
       this.tempDir = "/tmp";
       this.executable = "/usr/local/bin/dot";
-    } else if (GraphViz.osName.equals("Linux")) {
+    } else if (GraphViz.OSNAME.equals("Linux")) {
       this.tempDir = "/tmp";
       this.executable = "/usr/bin/dot";
     }
@@ -93,6 +98,7 @@ public class GraphViz {
 
   /**
    * Configurable Constructor with path to executable dot and a temp dir.
+   * 
    * @param executable absolute path to dot executable
    * @param tempDir absolute path to temp directory
    */
@@ -159,9 +165,9 @@ public class GraphViz {
     try {
       dot = writeDotSourceToFile(dotSource);
       if (dot != null) {
-        imgStream = get_imgStream(dot, type, representationType);
-        if (dot.delete() == false) {
-          System.err.println("Warning: " + dot.getAbsolutePath() + " could not be deleted!");
+        imgStream = getImgStream(dot, type, representationType);
+        if (LOGGER.isLoggable(Level.WARNING) && dot.delete() == false) {
+          LOGGER.warning("Warning: " + dot.getAbsolutePath() + " could not be deleted!");
         }
         return imgStream;
       }
@@ -195,7 +201,7 @@ public class GraphViz {
       FileOutputStream fos = new FileOutputStream(to);
       fos.write(img);
       fos.close();
-    } catch (java.io.IOException ioe) {
+    } catch (Exception ioe) {
       return -1;
     }
     return 1;
@@ -218,7 +224,8 @@ public class GraphViz {
    * @see http://www.graphviz.org under the Roadmap title
    * @return The image of the graph in .gif format.
    */
-  private byte[] get_imgStream(File dot, String type, String representationType) {
+  private byte[] getImgStream(File dot, String type, String representationType) {
+
     File img;
     byte[] imgStream = null;
 
@@ -233,7 +240,6 @@ public class GraphViz {
           img.getAbsolutePath()};
       Process p = rt.exec(args);
       p.waitFor();
-
       FileInputStream in = new FileInputStream(img.getAbsolutePath());
       imgStream = new byte[in.available()];
       in.read(imgStream);
@@ -242,15 +248,18 @@ public class GraphViz {
         in.close();
       }
 
-      if (img.delete() == false) {
-        System.err.println("Warning: " + img.getAbsolutePath() + " could not be deleted!");
+      if (LOGGER.isLoggable(Level.WARNING) && img.delete() == false) {
+        LOGGER.warning("Warning: " + img.getAbsolutePath() + " could not be deleted!");
       }
     } catch (java.io.IOException ioe) {
-      System.err.println("Error:    in I/O processing of tempfile in dir " + tempDir + "\n");
-      System.err.println("       or in calling external command");
+      if (LOGGER.isLoggable(Level.WARNING)) {
+
+        LOGGER.warning("Error:    in I/O processing of tempfile in dir " + tempDir + "\n");
+        LOGGER.warning("       or in calling external command");
+      }
       ioe.printStackTrace();
     } catch (java.lang.InterruptedException ie) {
-      System.err.println("Error: the execution of the external program was interrupted");
+      LOGGER.warning("Error: the execution of the external program was interrupted");
       ie.printStackTrace();
     }
 
@@ -265,13 +274,14 @@ public class GraphViz {
    */
   private File writeDotSourceToFile(String str) throws java.io.IOException {
     File temp;
+    temp = File.createTempFile("graph_", ".dot.tmp", new File(tempDir));
     try {
-      temp = File.createTempFile("graph_", ".dot.tmp", new File(tempDir));
       FileWriter fout = new FileWriter(temp);
       fout.write(str);
       fout.close();
     } catch (Exception e) {
-      System.err.println("Error: I/O error while writing the dot source to temp file!");
+
+      LOGGER.warning("Error: I/O error while writing the dot source to temp file!");
       return null;
     }
     return temp;
@@ -282,7 +292,7 @@ public class GraphViz {
    * 
    * @return A string to open a graph.
    */
-  public String start_graph() {
+  public String startGraph() {
     return "digraph G {";
   }
 
@@ -291,7 +301,7 @@ public class GraphViz {
    * 
    * @return A string to close a graph.
    */
-  public String end_graph() {
+  public String endGraph() {
     return "}";
   }
 
@@ -301,7 +311,7 @@ public class GraphViz {
    * 
    * @return A string to open a subgraph.
    */
-  public String start_subgraph(int clusterid) {
+  public String startSubgraph(int clusterid) {
     return "subgraph cluster_" + clusterid + " {";
   }
 
@@ -310,7 +320,7 @@ public class GraphViz {
    * 
    * @return A string to close a graph.
    */
-  public String end_subgraph() {
+  public String endSubgraph() {
     return "}";
   }
 
@@ -325,17 +335,19 @@ public class GraphViz {
     try {
       FileInputStream fis = new FileInputStream(input);
       DataInputStream dis = new DataInputStream(fis);
-      BufferedReader br = new BufferedReader(new InputStreamReader(dis));
+      BufferedReader br = new BufferedReader(new InputStreamReader(dis, StandardCharsets.UTF_8));
       String line;
       while ((line = br.readLine()) != null) {
         sb.append(line);
       }
       dis.close();
+      br.close();
     } catch (Exception e) {
-      System.err.println("Error: " + e.getMessage());
+      if (LOGGER.isLoggable(Level.WARNING)) {
+        LOGGER.warning("Error: " + e.getMessage());
+      }
     }
-
     this.graph = sb;
   }
-
 } // end of class GraphViz
+
