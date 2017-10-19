@@ -14,8 +14,10 @@ import javax.swing.JLabel;
 import se.graph.GraphViz;
 
 public class Main {
+  private JFrame myframe = new JFrame("Graph");
+  private JLabel mylabel = new JLabel();
   Graph createDirectedGraph(String filename) throws FileNotFoundException {
-    filename = "C:\\Users\\pww\\Desktop\\noyte.txt";
+    //filename = "C:\\Users\\pww\\Desktop\\noyte.txt";
     Graph graph = null;
     if(filename!=null) {
       String temp = new Scanner(new File(filename)).useDelimiter("\\Z").next().toLowerCase();
@@ -39,13 +41,10 @@ public class Main {
     String repesentationType = "dot";
     File out = new File("e:/out." + type); // Windows
     gv.writeGraphToFile(gv.getGraph(gv.getDotSource(), type, repesentationType), out);
-    JFrame myframe = new JFrame("Graph");
-    JLabel mylabel = new JLabel();
     myframe.setVisible(true);
     mylabel.setIcon(new ImageIcon(gv.getGraph(gv.getDotSource(), type, repesentationType)));
     myframe.add(mylabel);
     myframe.pack();
-
   }
 
   String queryBridgeWords(Graph graph, String word1, String word2) {

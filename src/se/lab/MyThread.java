@@ -21,7 +21,6 @@ public class MyThread extends Thread {
    * @see java.lang.Thread#run()
    */
   public void run() {
-
     if (fr != null && path != null) {
       String[] nodes = path.split(" ");
       fr.tfres.setText("");
