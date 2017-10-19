@@ -1,9 +1,18 @@
 package se.lab;
 
+
 public class Graph {
   int vertexNum;
-  Vertex[] vertexs = new Vertex[100]; // most 100 point
-  Edge[][] edges = new Edge[100][100]; // edge[i][j] from i to edges[i][j].to.id
+//  Vertex[] vertexs = new Vertex[100]; // most 100 point
+//  Edge[][] edges = new Edge[100][100]; // edge[i][j] from i to edges[i][j].to.id
+  Vertex[] vertexs;
+  Edge[][] edges;
+  
+  public Graph(int num) {
+    // TODO Auto-generated constructor stub
+    vertexs = new Vertex[num];
+    edges = new Edge[num][num];
+  }
 
   /**
    * set edges and vertexs status to false.

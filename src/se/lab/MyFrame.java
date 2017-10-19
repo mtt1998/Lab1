@@ -15,6 +15,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.File;
+import java.io.FileNotFoundException;
 import javax.swing.JFileChooser;
 import javax.swing.JLabel;
 
@@ -139,7 +140,12 @@ public class MyFrame extends Frame {
         jfc.showDialog(new JLabel(), "ѡ��");
         File file = jfc.getSelectedFile();
         if (file != null) {
-          graph = control.createDirectedGraph(file.getAbsolutePath());
+          try {
+            graph = control.createDirectedGraph(file.getAbsolutePath());
+          } catch (FileNotFoundException e1) {
+            // TODO Auto-generated catch block
+            e1.printStackTrace();
+          }
         }
       } else if (e.getActionCommand().equals("save")) {
         if (graph != null) {

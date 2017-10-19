@@ -1,8 +1,12 @@
 package se.lab;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
 import java.util.Random;
+import java.util.Scanner;
 import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
@@ -10,40 +14,16 @@ import javax.swing.JLabel;
 import se.graph.GraphViz;
 
 public class Main {
-  Graph createDirectedGraph(String filename) {
-    int ch = -1;
+  Graph createDirectedGraph(String filename) throws FileNotFoundException {
+    filename = "C:\\Users\\pww\\Desktop\\noyte.txt";
     Graph graph = null;
-    try {
-      FileReader freader = new FileReader(filename);
-      graph = new Graph();
-
-      String u = null;
-      StringBuffer chbuf = new StringBuffer(50);
-      while ((ch = freader.read()) != -1) {
-        if (ch == 32 || ch == 46 || ch == 33 || ch == 44 || ch == 63 || ch == 10 || ch == 13) {
-          if (chbuf.length() != 0) {
-            if (u == null) {
-              graph.addNode(chbuf.toString());
-            } else {
-              graph.addEdge(u, chbuf.toString());
-            }
-            u = chbuf.toString();
-            chbuf.setLength(0);
-          }
-        } else if ((ch >= 65 && ch <= 90) || (ch >= 97 && ch <= 122)) {
-          chbuf.append((char) ch);
-        }
+    if(filename!=null) {
+      String temp = new Scanner(new File(filename)).useDelimiter("\\Z").next().toLowerCase();
+      String[] words = temp.replaceAll("[^a-zA-Z]+", " ").replaceFirst("^ ", "").split(" ");
+      graph = new Graph(words.length + 2);
+      for (int i = 0; i < words.length - 1; i++) {
+            graph.addEdge(words[i], words[i + 1]);
       }
-      if (chbuf.length() != 0) {
-        if (u != null) {
-          graph.addEdge(u, chbuf.toString());
-        } else {
-          graph.addNode(chbuf.toString());
-        }
-      }
-      freader.close();
-    } catch (Exception e) {
-      Logger.getLogger(Main.class.getName()).warning("cannot read the file normally");
     }
     return graph;
   }
@@ -164,10 +144,10 @@ public class Main {
     if (idend == -1 || idst == -1) {
       return "";
     }
-    int[] dist = new int[100]; // vertexNum < 100
-    int[] bfnode = new int[100]; // vertexNum < 100
+    int[] dist = new int[graph.vertexNum]; // vertexNum < graph.vertexNum
+    int[] bfnode = new int[graph.vertexNum]; // vertexNum < graph.vertexNum
     graph.dijkstra(word1, dist, bfnode);
-    int[] stk = new int[100]; // vertexNum < 100;
+    int[] stk = new int[graph.vertexNum]; // vertexNum < graph.vertexNum;
     int top = -1;
     int now = idend;
     while (now != -1) {
@@ -185,10 +165,10 @@ public class Main {
   }
 
   String showAllShortestPath(Graph graph, String word) {
-    int[] dist = new int[100]; // vertexNum < 100
-    int[] bfnode = new int[100]; // vertexNum < 100
+    int[] dist = new int[graph.vertexNum]; // vertexNum < graph.vertexNum
+    int[] bfnode = new int[graph.vertexNum]; // vertexNum < graph.vertexNum
     graph.dijkstra(word, dist, bfnode);
-    int[] stk = new int[100]; // vertexNum < 100;
+    int[] stk = new int[graph.vertexNum]; // vertexNum < graph.vertexNum;
     int top = -1;
     StringBuilder res = new StringBuilder();
     for (int idend = 0; idend < graph.vertexNum; idend++) {

@@ -5,6 +5,3 @@ public class Gui {
     new MyFrame("GUI").launchFrame();
   }
 }
-
-
-
