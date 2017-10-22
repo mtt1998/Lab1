@@ -1,0 +1,595 @@
+src/se/graph/GraphViz.java:4:	Comment is too large: Too many lines
+src/se/graph/GraphViz.java:6:	Comment is too large: Line too long
+src/se/graph/GraphViz.java:7:	Comment is too large: Line too long
+src/se/graph/GraphViz.java:8:	Comment is too large: Line too long
+src/se/graph/GraphViz.java:9:	Comment is too large: Line too long
+src/se/graph/GraphViz.java:10:	Comment is too large: Line too long
+src/se/graph/GraphViz.java:11:	Comment is too large: Line too long
+src/se/graph/GraphViz.java:12:	Comment is too large: Line too long
+src/se/graph/GraphViz.java:13:	Comment is too large: Line too long
+src/se/graph/GraphViz.java:27:	This class has too many methods, consider refactoring it.
+src/se/graph/GraphViz.java:27:	headerCommentRequirement Required
+src/se/graph/GraphViz.java:28:	To avoid mistakes add a comment at the beginning of the LOGGER field if you want a default access modifier
+src/se/graph/GraphViz.java:28:	Use explicit scoping instead of the default package private level
+src/se/graph/GraphViz.java:28:	fieldCommentRequirement Required
+src/se/graph/GraphViz.java:35:	Comment is too large: Line too long
+src/se/graph/GraphViz.java:38:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/se/graph/GraphViz.java:44:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/se/graph/GraphViz.java:64:	publicMethodCommentRequirement Required
+src/se/graph/GraphViz.java:71:	Fields should be declared at the top of the class, before any method declarations, constructors, initializers or inner classes.
+src/se/graph/GraphViz.java:71:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/se/graph/GraphViz.java:71:	StringBuffers can grow quite a lot, and so may become a source of memory leak (if the owning class has a long life time).
+src/se/graph/GraphViz.java:73:	Fields should be declared at the top of the class, before any method declarations, constructors, initializers or inner classes.
+src/se/graph/GraphViz.java:73:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/se/graph/GraphViz.java:73:	fieldCommentRequirement Required
+src/se/graph/GraphViz.java:75:	Fields should be declared at the top of the class, before any method declarations, constructors, initializers or inner classes.
+src/se/graph/GraphViz.java:75:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/se/graph/GraphViz.java:75:	fieldCommentRequirement Required
+src/se/graph/GraphViz.java:78:	Comment is too large: Line too long
+src/se/graph/GraphViz.java:79:	Comment is too large: Line too long
+src/se/graph/GraphViz.java:80:	Comment is too large: Line too long
+src/se/graph/GraphViz.java:87:	Position literals first in String comparisons
+src/se/graph/GraphViz.java:90:	Position literals first in String comparisons
+src/se/graph/GraphViz.java:102:	Parameter 'executable' is not assigned and could be declared final
+src/se/graph/GraphViz.java:102:	Parameter 'tempDir' is not assigned and could be declared final
+src/se/graph/GraphViz.java:119:	Parameter 'line' is not assigned and could be declared final
+src/se/graph/GraphViz.java:126:	Parameter 'line' is not assigned and could be declared final
+src/se/graph/GraphViz.java:137:	publicMethodCommentRequirement Required
+src/se/graph/GraphViz.java:141:	Comment is too large: Too many lines
+src/se/graph/GraphViz.java:145:	Comment is too large: Line too long
+src/se/graph/GraphViz.java:158:	Avoid excessively long variable names like representationType
+src/se/graph/GraphViz.java:158:	Parameter 'dotSource' is not assigned and could be declared final
+src/se/graph/GraphViz.java:158:	Parameter 'representationType' is not assigned and could be declared final
+src/se/graph/GraphViz.java:158:	Parameter 'type' is not assigned and could be declared final
+src/se/graph/GraphViz.java:160:	Found 'DD'-anomaly for variable 'imgStream' (lines '160'-'165').
+src/se/graph/GraphViz.java:160:	Found 'DU'-anomaly for variable 'imgStream' (lines '160'-'175').
+src/se/graph/GraphViz.java:166:	Avoid unnecessary comparisons in boolean expressions
+src/se/graph/GraphViz.java:166:	Potential violation of Law of Demeter (object not created locally)
+src/se/graph/GraphViz.java:167:	Potential violation of Law of Demeter (object not created locally)
+src/se/graph/GraphViz.java:169:	A method should have only one exit point, and that should be the last statement in the method
+src/se/graph/GraphViz.java:171:	A method should have only one exit point, and that should be the last statement in the method
+src/se/graph/GraphViz.java:184:	Parameter 'file' is not assigned and could be declared final
+src/se/graph/GraphViz.java:184:	Parameter 'img' is not assigned and could be declared final
+src/se/graph/GraphViz.java:185:	Avoid variables with short names like to
+src/se/graph/GraphViz.java:185:	Local variable 'to' could be declared final
+src/se/graph/GraphViz.java:196:	Avoid variables with short names like to
+src/se/graph/GraphViz.java:196:	Parameter 'img' is not assigned and could be declared final
+src/se/graph/GraphViz.java:196:	Parameter 'to' is not assigned and could be declared final
+src/se/graph/GraphViz.java:198:	Local variable 'fos' could be declared final
+src/se/graph/GraphViz.java:202:	A method should have only one exit point, and that should be the last statement in the method
+src/se/graph/GraphViz.java:207:	Comment is too large: Too many lines
+src/se/graph/GraphViz.java:211:	Comment is too large: Line too long
+src/se/graph/GraphViz.java:224:	Avoid excessively long variable names like representationType
+src/se/graph/GraphViz.java:224:	Parameter 'dot' is not assigned and could be declared final
+src/se/graph/GraphViz.java:224:	Parameter 'representationType' is not assigned and could be declared final
+src/se/graph/GraphViz.java:224:	Parameter 'type' is not assigned and could be declared final
+src/se/graph/GraphViz.java:227:	Found 'DD'-anomaly for variable 'imgStream' (lines '227'-'242').
+src/se/graph/GraphViz.java:231:	Avoid variables with short names like rt
+src/se/graph/GraphViz.java:231:	Local variable 'rt' could be declared final
+src/se/graph/GraphViz.java:235:	Local variable 'args' could be declared final
+src/se/graph/GraphViz.java:238:	Avoid variables with short names like p
+src/se/graph/GraphViz.java:238:	Local variable 'p' could be declared final
+src/se/graph/GraphViz.java:238:	Potential violation of Law of Demeter (object not created locally)
+src/se/graph/GraphViz.java:239:	Potential violation of Law of Demeter (object not created locally)
+src/se/graph/GraphViz.java:241:	Avoid variables with short names like in
+src/se/graph/GraphViz.java:241:	Local variable 'in' could be declared final
+src/se/graph/GraphViz.java:249:	Avoid unnecessary comparisons in boolean expressions
+src/se/graph/GraphViz.java:258:	Avoid printStackTrace(); use a logger call instead.
+src/se/graph/GraphViz.java:261:	Avoid printStackTrace(); use a logger call instead.
+src/se/graph/GraphViz.java:268:	Comment is too large: Line too long
+src/se/graph/GraphViz.java:273:	Parameter 'str' is not assigned and could be declared final
+src/se/graph/GraphViz.java:277:	Local variable 'fout' could be declared final
+src/se/graph/GraphViz.java:280:	Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+src/se/graph/GraphViz.java:282:	A method should have only one exit point, and that should be the last statement in the method
+src/se/graph/GraphViz.java:306:	Comment is too large: Line too long
+src/se/graph/GraphViz.java:311:	Parameter 'clusterid' is not assigned and could be declared final
+src/se/graph/GraphViz.java:329:	Parameter 'input' is not assigned and could be declared final
+src/se/graph/GraphViz.java:330:	Avoid variables with short names like sb
+src/se/graph/GraphViz.java:330:	Local variable 'sb' could be declared final
+src/se/graph/GraphViz.java:333:	Local variable 'fis' could be declared final
+src/se/graph/GraphViz.java:334:	Local variable 'dis' could be declared final
+src/se/graph/GraphViz.java:335:	Avoid variables with short names like br
+src/se/graph/GraphViz.java:335:	Local variable 'br' could be declared final
+src/se/graph/GraphViz.java:337:	Avoid assignments in operands
+src/se/graph/GraphViz.java:337:	Found 'DU'-anomaly for variable 'line' (lines '337'-'348').
+src/se/graph/GraphViz.java:341:	Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+src/se/lab/Edge.java:3:	Avoid short class names like Edge
+src/se/lab/Edge.java:3:	headerCommentRequirement Required
+src/se/lab/Edge.java:4:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/se/lab/Edge.java:4:	Private field 'from' could be made final; it is only initialized in the declaration or constructor.
+src/se/lab/Edge.java:4:	fieldCommentRequirement Required
+src/se/lab/Edge.java:5:	Avoid variables with short names like to
+src/se/lab/Edge.java:5:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/se/lab/Edge.java:5:	Private field 'to' could be made final; it is only initialized in the declaration or constructor.
+src/se/lab/Edge.java:5:	fieldCommentRequirement Required
+src/se/lab/Edge.java:6:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/se/lab/Edge.java:6:	fieldCommentRequirement Required
+src/se/lab/Edge.java:7:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/se/lab/Edge.java:7:	fieldCommentRequirement Required
+src/se/lab/Edge.java:9:	Avoid variables with short names like to
+src/se/lab/Edge.java:9:	Parameter 'from' is not assigned and could be declared final
+src/se/lab/Edge.java:9:	Parameter 'to' is not assigned and could be declared final
+src/se/lab/Edge.java:21:	Local variable 'res' could be declared final
+src/se/lab/Edge.java:22:	StringBuffer (or StringBuilder).append is called consecutively without reusing the target variable.
+src/se/lab/Edge.java:23:	StringBuffer (or StringBuilder).append is called consecutively without reusing the target variable.
+src/se/lab/Edge.java:28:	publicMethodCommentRequirement Required
+src/se/lab/Edge.java:32:	publicMethodCommentRequirement Required
+src/se/lab/Edge.java:36:	A getX() method which returns a boolean should be named isX()
+src/se/lab/Edge.java:36:	publicMethodCommentRequirement Required
+src/se/lab/Edge.java:40:	Avoid variables with short names like s
+src/se/lab/Edge.java:40:	Parameter 's' is not assigned and could be declared final
+src/se/lab/Edge.java:40:	publicMethodCommentRequirement Required
+src/se/lab/Edge.java:44:	publicMethodCommentRequirement Required
+src/se/lab/Graph.java:3:	Each class should declare at least one constructor
+src/se/lab/Graph.java:3:	headerCommentRequirement Required
+src/se/lab/Graph.java:4:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/se/lab/Graph.java:4:	To avoid mistakes add a comment at the beginning of the vertexNum field if you want a default access modifier
+src/se/lab/Graph.java:4:	Use explicit scoping instead of the default package private level
+src/se/lab/Graph.java:4:	fieldCommentRequirement Required
+src/se/lab/Graph.java:5:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/se/lab/Graph.java:5:	To avoid mistakes add a comment at the beginning of the vertexs field if you want a default access modifier
+src/se/lab/Graph.java:5:	Use explicit scoping instead of the default package private level
+src/se/lab/Graph.java:5:	fieldCommentRequirement Required
+src/se/lab/Graph.java:6:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/se/lab/Graph.java:6:	To avoid mistakes add a comment at the beginning of the edges field if you want a default access modifier
+src/se/lab/Graph.java:6:	Use explicit scoping instead of the default package private level
+src/se/lab/Graph.java:6:	fieldCommentRequirement Required
+src/se/lab/Graph.java:12:	Avoid variables with short names like u
+src/se/lab/Graph.java:12:	Found 'DD'-anomaly for variable 'u' (lines '12'-'14').
+src/se/lab/Graph.java:12:	Found 'DU'-anomaly for variable 'u' (lines '12'-'20').
+src/se/lab/Graph.java:15:	Potential violation of Law of Demeter (object not created locally)
+src/se/lab/Graph.java:16:	Potential violation of Law of Demeter (object not created locally)
+src/se/lab/Graph.java:17:	Potential violation of Law of Demeter (method chain calls)
+src/se/lab/Graph.java:17:	Potential violation of Law of Demeter (method chain calls)
+src/se/lab/Graph.java:17:	Potential violation of Law of Demeter (method chain calls)
+src/se/lab/Graph.java:27:	Avoid reassigning parameters such as 'word'
+src/se/lab/Graph.java:28:	When doing a String.toLowerCase()/toUpperCase() call, use a Locale
+src/se/lab/Graph.java:29:	Found 'DD'-anomaly for variable 'trans' (lines '29'-'35').
+src/se/lab/Graph.java:30:	Found 'DD'-anomaly for variable 'len' (lines '30'-'32').
+src/se/lab/Graph.java:30:	Found 'DD'-anomaly for variable 'len' (lines '30'-'34').
+src/se/lab/Graph.java:30:	Found 'DD'-anomaly for variable 'len' (lines '30'-'37').
+src/se/lab/Graph.java:30:	Found 'DD'-anomaly for variable 'len' (lines '30'-'39').
+src/se/lab/Graph.java:41:	Found 'DU'-anomaly for variable 'name' (lines '41'-'48').
+src/se/lab/Graph.java:41:	Local variable 'name' could be declared final
+src/se/lab/Graph.java:43:	Potential violation of Law of Demeter (method chain calls)
+src/se/lab/Graph.java:43:	Potential violation of Law of Demeter (method chain calls)
+src/se/lab/Graph.java:43:	Potential violation of Law of Demeter (method chain calls)
+src/se/lab/Graph.java:43:	Potential violation of Law of Demeter (method chain calls)
+src/se/lab/Graph.java:44:	A method should have only one exit point, and that should be the last statement in the method
+src/se/lab/Graph.java:55:	Avoid reassigning parameters such as 'word'
+src/se/lab/Graph.java:56:	When doing a String.toLowerCase()/toUpperCase() call, use a Locale
+src/se/lab/Graph.java:57:	Found 'DD'-anomaly for variable 'trans' (lines '57'-'63').
+src/se/lab/Graph.java:58:	Found 'DD'-anomaly for variable 'len' (lines '58'-'60').
+src/se/lab/Graph.java:58:	Found 'DD'-anomaly for variable 'len' (lines '58'-'62').
+src/se/lab/Graph.java:58:	Found 'DD'-anomaly for variable 'len' (lines '58'-'65').
+src/se/lab/Graph.java:58:	Found 'DD'-anomaly for variable 'len' (lines '58'-'67').
+src/se/lab/Graph.java:69:	Local variable 'name' could be declared final
+src/se/lab/Graph.java:70:	Avoid variables with short names like id
+src/se/lab/Graph.java:70:	Local variable 'id' could be declared final
+src/se/lab/Graph.java:71:	Found 'DD'-anomaly for variable 'res' (lines '71'-'73').
+src/se/lab/Graph.java:71:	Found 'DD'-anomaly for variable 'res' (lines '71'-'76').
+src/se/lab/Graph.java:86:	Parameter 'word1' is not assigned and could be declared final
+src/se/lab/Graph.java:86:	Parameter 'word2' is not assigned and could be declared final
+src/se/lab/Graph.java:87:	Avoid variables with short names like u
+src/se/lab/Graph.java:87:	Local variable 'u' could be declared final
+src/se/lab/Graph.java:88:	Avoid variables with short names like v
+src/se/lab/Graph.java:88:	Found 'DU'-anomaly for variable 'v' (lines '88'-'101').
+src/se/lab/Graph.java:88:	Local variable 'v' could be declared final
+src/se/lab/Graph.java:89:	Found 'DD'-anomaly for variable 'flag' (lines '89'-'93').
+src/se/lab/Graph.java:90:	Potential violation of Law of Demeter (object not created locally)
+src/se/lab/Graph.java:91:	Potential violation of Law of Demeter (method chain calls)
+src/se/lab/Graph.java:91:	Potential violation of Law of Demeter (method chain calls)
+src/se/lab/Graph.java:91:	Potential violation of Law of Demeter (method chain calls)
+src/se/lab/Graph.java:91:	Potential violation of Law of Demeter (method chain calls)
+src/se/lab/Graph.java:91:	Potential violation of Law of Demeter (object not created locally)
+src/se/lab/Graph.java:91:	Potential violation of Law of Demeter (object not created locally)
+src/se/lab/Graph.java:92:	Potential violation of Law of Demeter (method chain calls)
+src/se/lab/Graph.java:92:	Potential violation of Law of Demeter (method chain calls)
+src/se/lab/Graph.java:92:	Potential violation of Law of Demeter (method chain calls)
+src/se/lab/Graph.java:92:	Potential violation of Law of Demeter (object not created locally)
+src/se/lab/Graph.java:98:	Potential violation of Law of Demeter (method chain calls)
+src/se/lab/Graph.java:98:	Potential violation of Law of Demeter (method chain calls)
+src/se/lab/Graph.java:98:	Potential violation of Law of Demeter (object not created locally)
+src/se/lab/Graph.java:98:	Potential violation of Law of Demeter (object not created locally)
+src/se/lab/Graph.java:99:	Potential violation of Law of Demeter (object not created locally)
+src/se/lab/Graph.java:108:	Local variable 'res' could be declared final
+src/se/lab/Graph.java:110:	Avoid concatenating nonliterals in a StringBuffer/StringBuilder constructor or append().
+src/se/lab/Graph.java:110:	Potential violation of Law of Demeter (method chain calls)
+src/se/lab/Graph.java:110:	Potential violation of Law of Demeter (method chain calls)
+src/se/lab/Graph.java:111:	Potential violation of Law of Demeter (method chain calls)
+src/se/lab/Graph.java:111:	Potential violation of Law of Demeter (method chain calls)
+src/se/lab/Graph.java:112:	Potential violation of Law of Demeter (method chain calls)
+src/se/lab/Graph.java:112:	Potential violation of Law of Demeter (method chain calls)
+src/se/lab/Graph.java:112:	Potential violation of Law of Demeter (method chain calls)
+src/se/lab/Graph.java:125:	Consider using varargs for methods or constructors which take an array the last parameter.
+src/se/lab/Graph.java:125:	Parameter 'word' is not assigned and could be declared final
+src/se/lab/Graph.java:126:	Local variable 'idst' could be declared final
+src/se/lab/Graph.java:128:	A method should have only one exit point, and that should be the last statement in the method
+src/se/lab/Graph.java:137:	Avoid variables with short names like mn
+src/se/lab/Graph.java:137:	Found 'DD'-anomaly for variable 'mn' (lines '137'-'137').
+src/se/lab/Graph.java:137:	Found 'DU'-anomaly for variable 'mn' (lines '137'-'156').
+src/se/lab/Graph.java:138:	Found 'DD'-anomaly for variable 'loc' (lines '138'-'141').
+src/se/lab/Graph.java:140:	Potential violation of Law of Demeter (method chain calls)
+src/se/lab/Graph.java:140:	Potential violation of Law of Demeter (method chain calls)
+src/se/lab/Graph.java:141:	Found 'DD'-anomaly for variable 'loc' (lines '141'-'141').
+src/se/lab/Graph.java:142:	Found 'DD'-anomaly for variable 'mn' (lines '142'-'137').
+src/se/lab/Graph.java:142:	Found 'DU'-anomaly for variable 'mn' (lines '142'-'156').
+src/se/lab/Graph.java:145:	Potential violation of Law of Demeter (method chain calls)
+src/se/lab/Graph.java:145:	Potential violation of Law of Demeter (method chain calls)
+src/se/lab/Graph.java:146:	Potential violation of Law of Demeter (method chain calls)
+src/se/lab/Graph.java:146:	Potential violation of Law of Demeter (method chain calls)
+src/se/lab/Graph.java:147:	Avoid variables with short names like e
+src/se/lab/Graph.java:147:	Local variable 'e' could be declared final
+src/se/lab/Graph.java:148:	Avoid variables with short names like v
+src/se/lab/Graph.java:148:	Local variable 'v' could be declared final
+src/se/lab/Graph.java:148:	Potential violation of Law of Demeter (method chain calls)
+src/se/lab/Graph.java:148:	Potential violation of Law of Demeter (object not created locally)
+src/se/lab/Graph.java:149:	Potential violation of Law of Demeter (object not created locally)
+src/se/lab/Graph.java:150:	Potential violation of Law of Demeter (object not created locally)
+src/se/lab/Gui.java:3:	All methods are static.  Consider using a utility class instead. Alternatively, you could add a private constructor or make the class abstract to silence this warning.
+src/se/lab/Gui.java:3:	Avoid short class names like Gui
+src/se/lab/Gui.java:3:	headerCommentRequirement Required
+src/se/lab/Gui.java:4:	Parameter 'args' is not assigned and could be declared final
+src/se/lab/Gui.java:4:	publicMethodCommentRequirement Required
+src/se/lab/Gui.java:5:	An empty statement (semicolon) not part of a loop
+src/se/lab/Main.java:11:	Avoid short class names like Main
+src/se/lab/Main.java:11:	Each class should declare at least one constructor
+src/se/lab/Main.java:11:	The class 'Main' has a Cyclomatic Complexity of 6 (Highest = 18).
+src/se/lab/Main.java:11:	headerCommentRequirement Required
+src/se/lab/Main.java:12:	Parameter 'filename' is not assigned and could be declared final
+src/se/lab/Main.java:12:	The method 'createDirectedGraph' has a Cyclomatic Complexity of 18.
+src/se/lab/Main.java:12:	To avoid mistakes add a comment at the beginning of the createDirectedGraph method if you want a default access modifier
+src/se/lab/Main.java:12:	Use explicit scoping instead of the default package private level
+src/se/lab/Main.java:13:	Found 'DD'-anomaly for variable 'freader' (lines '13'-'17').
+src/se/lab/Main.java:14:	Avoid variables with short names like ch
+src/se/lab/Main.java:14:	Found 'DD'-anomaly for variable 'ch' (lines '14'-'22').
+src/se/lab/Main.java:15:	Found 'DD'-anomaly for variable 'graph' (lines '15'-'18').
+src/se/lab/Main.java:20:	Avoid variables with short names like u
+src/se/lab/Main.java:20:	Found 'DU'-anomaly for variable 'u' (lines '20'-'51').
+src/se/lab/Main.java:21:	Local variable 'chbuf' could be declared final
+src/se/lab/Main.java:22:	Avoid assignments in operands
+src/se/lab/Main.java:22:	Found 'DU'-anomaly for variable 'ch' (lines '22'-'51').
+src/se/lab/Main.java:30:	Found 'DU'-anomaly for variable 'u' (lines '30'-'51').
+src/se/lab/Main.java:33:	Useless parentheses.
+src/se/lab/Main.java:33:	Useless parentheses.
+src/se/lab/Main.java:38:	Avoid if (x != y) ..; else ..;
+src/se/lab/Main.java:45:	Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+src/se/lab/Main.java:46:	System.out.println is used
+src/se/lab/Main.java:47:	Avoid printStackTrace(); use a logger call instead.
+src/se/lab/Main.java:53:	Parameter 'graph' is not assigned and could be declared final
+src/se/lab/Main.java:53:	To avoid mistakes add a comment at the beginning of the showDirectedGraph method if you want a default access modifier
+src/se/lab/Main.java:53:	Use explicit scoping instead of the default package private level
+src/se/lab/Main.java:54:	Avoid variables with short names like gv
+src/se/lab/Main.java:54:	Local variable 'gv' could be declared final
+src/se/lab/Main.java:59:	Local variable 'type' could be declared final
+src/se/lab/Main.java:60:	Local variable 'repesentationType' could be declared final
+src/se/lab/Main.java:61:	Local variable 'out' could be declared final
+src/se/lab/Main.java:63:	Local variable 'myframe' could be declared final
+src/se/lab/Main.java:64:	Local variable 'mylabel' could be declared final
+src/se/lab/Main.java:72:	Parameter 'graph' is not assigned and could be declared final
+src/se/lab/Main.java:72:	Parameter 'word1' is not assigned and could be declared final
+src/se/lab/Main.java:72:	Parameter 'word2' is not assigned and could be declared final
+src/se/lab/Main.java:72:	To avoid mistakes add a comment at the beginning of the queryBridgeWords method if you want a default access modifier
+src/se/lab/Main.java:72:	Use explicit scoping instead of the default package private level
+src/se/lab/Main.java:73:	Local variable 'idu' could be declared final
+src/se/lab/Main.java:74:	Local variable 'idv' could be declared final
+src/se/lab/Main.java:76:	A method should have only one exit point, and that should be the last statement in the method
+src/se/lab/Main.java:78:	A method should have only one exit point, and that should be the last statement in the method
+src/se/lab/Main.java:80:	A method should have only one exit point, and that should be the last statement in the method
+src/se/lab/Main.java:82:	Local variable 'res' could be declared final
+src/se/lab/Main.java:83:	Potential violation of Law of Demeter (method chain calls)
+src/se/lab/Main.java:83:	Potential violation of Law of Demeter (method chain calls)
+src/se/lab/Main.java:84:	Local variable 'bridge' could be declared final
+src/se/lab/Main.java:84:	Potential violation of Law of Demeter (method chain calls)
+src/se/lab/Main.java:84:	Potential violation of Law of Demeter (method chain calls)
+src/se/lab/Main.java:84:	Potential violation of Law of Demeter (method chain calls)
+src/se/lab/Main.java:85:	Potential violation of Law of Demeter (object not created locally)
+src/se/lab/Main.java:86:	Potential violation of Law of Demeter (method chain calls)
+src/se/lab/Main.java:86:	Potential violation of Law of Demeter (method chain calls)
+src/se/lab/Main.java:86:	Potential violation of Law of Demeter (method chain calls)
+src/se/lab/Main.java:86:	Potential violation of Law of Demeter (method chain calls)
+src/se/lab/Main.java:86:	Potential violation of Law of Demeter (object not created locally)
+src/se/lab/Main.java:87:	Avoid concatenating nonliterals in a StringBuffer/StringBuilder constructor or append().
+src/se/lab/Main.java:87:	Potential violation of Law of Demeter (object not created locally)
+src/se/lab/Main.java:92:	A method should have only one exit point, and that should be the last statement in the method
+src/se/lab/Main.java:98:	Parameter 'graph' is not assigned and could be declared final
+src/se/lab/Main.java:98:	Parameter 'inputText' is not assigned and could be declared final
+src/se/lab/Main.java:98:	To avoid mistakes add a comment at the beginning of the generateNewText method if you want a default access modifier
+src/se/lab/Main.java:98:	Use explicit scoping instead of the default package private level
+src/se/lab/Main.java:99:	Local variable 'arr' could be declared final
+src/se/lab/Main.java:100:	Local variable 'res' could be declared final
+src/se/lab/Main.java:103:	Found 'DD'-anomaly for variable 'bridge' (lines '105'-'109').
+src/se/lab/Main.java:103:	Found 'DU'-anomaly for variable 'bridge' (lines '105'-'120').
+src/se/lab/Main.java:106:	Avoid appending characters as strings in StringBuffer.append.
+src/se/lab/Main.java:107:	Potential violation of Law of Demeter (method chain calls)
+src/se/lab/Main.java:108:	Avoid using Literals in Conditional Statements
+src/se/lab/Main.java:108:	Potential violation of Law of Demeter (object not created locally)
+src/se/lab/Main.java:109:	Local variable 'bridgewords' could be declared final
+src/se/lab/Main.java:109:	Potential violation of Law of Demeter (method chain calls)
+src/se/lab/Main.java:109:	Potential violation of Law of Demeter (object not created locally)
+src/se/lab/Main.java:109:	Potential violation of Law of Demeter (object not created locally)
+src/se/lab/Main.java:110:	Avoid instantiating new objects inside loops
+src/se/lab/Main.java:110:	Avoid variables with short names like j
+src/se/lab/Main.java:110:	Local variable 'j' could be declared final
+src/se/lab/Main.java:111:	Avoid concatenating nonliterals in a StringBuffer/StringBuilder constructor or append().
+src/se/lab/Main.java:114:	Found 'DU'-anomaly for variable 'word1' (lines '116'-'120').
+src/se/lab/Main.java:120:	Found 'UR'-anomaly for variable 'p' (lines '122'-'139').
+src/se/lab/Main.java:120:	Parameter 'graph' is not assigned and could be declared final
+src/se/lab/Main.java:120:	Parameter 'paths' is not assigned and could be declared final
+src/se/lab/Main.java:120:	To avoid mistakes add a comment at the beginning of the showPathInGraph method if you want a default access modifier
+src/se/lab/Main.java:120:	Use explicit scoping instead of the default package private level
+src/se/lab/Main.java:121:	Found 'DU'-anomaly for variable 'colors' (lines '123'-'162').
+src/se/lab/Main.java:121:	Local variable 'colors' could be declared final
+src/se/lab/Main.java:129:	Local variable 'path' could be declared final
+src/se/lab/Main.java:130:	Avoid variables with short names like u
+src/se/lab/Main.java:130:	Found 'DD'-anomaly for variable 'u' (lines '132'-'143').
+src/se/lab/Main.java:130:	Found 'DU'-anomaly for variable 'u' (lines '132'-'162').
+src/se/lab/Main.java:131:	Avoid variables with short names like v
+src/se/lab/Main.java:131:	Found 'DD'-anomaly for variable 'v' (lines '133'-'145').
+src/se/lab/Main.java:131:	Found 'DU'-anomaly for variable 'v' (lines '133'-'162').
+src/se/lab/Main.java:132:	Found 'DD'-anomaly for variable 'colorindex' (lines '134'-'149').
+src/se/lab/Main.java:132:	Found 'DU'-anomaly for variable 'colorindex' (lines '134'-'162').
+src/se/lab/Main.java:133:	Avoid variables with short names like gv
+src/se/lab/Main.java:133:	Local variable 'gv' could be declared final
+src/se/lab/Main.java:136:	Local variable 'p' could be declared final
+src/se/lab/Main.java:137:	Local variable 'nodes' could be declared final
+src/se/lab/Main.java:141:	Found 'DD'-anomaly for variable 'u' (lines '143'-'143').
+src/se/lab/Main.java:141:	Found 'DU'-anomaly for variable 'u' (lines '143'-'162').
+src/se/lab/Main.java:144:	Potential violation of Law of Demeter (method chain calls)
+src/se/lab/Main.java:145:	Found 'DD'-anomaly for variable 'u' (lines '147'-'143').
+src/se/lab/Main.java:145:	Found 'DU'-anomaly for variable 'u' (lines '147'-'162').
+src/se/lab/Main.java:149:	Found 'DD'-anomaly for variable 'colorindex' (lines '151'-'149').
+src/se/lab/Main.java:149:	Found 'DU'-anomaly for variable 'colorindex' (lines '151'-'162').
+src/se/lab/Main.java:154:	Local variable 'myframe' could be declared final
+src/se/lab/Main.java:155:	Local variable 'mylabel' could be declared final
+src/se/lab/Main.java:162:	Parameter 'graph' is not assigned and could be declared final
+src/se/lab/Main.java:162:	Parameter 'word1' is not assigned and could be declared final
+src/se/lab/Main.java:162:	Parameter 'word2' is not assigned and could be declared final
+src/se/lab/Main.java:162:	To avoid mistakes add a comment at the beginning of the calcShortestPath method if you want a default access modifier
+src/se/lab/Main.java:162:	Use explicit scoping instead of the default package private level
+src/se/lab/Main.java:163:	Local variable 'idst' could be declared final
+src/se/lab/Main.java:164:	Local variable 'idend' could be declared final
+src/se/lab/Main.java:166:	A method should have only one exit point, and that should be the last statement in the method
+src/se/lab/Main.java:168:	Local variable 'dist' could be declared final
+src/se/lab/Main.java:169:	Local variable 'bfnode' could be declared final
+src/se/lab/Main.java:171:	Found 'DD'-anomaly for variable 'stk' (lines '173'-'177').
+src/se/lab/Main.java:171:	Found 'DU'-anomaly for variable 'stk' (lines '173'-'188').
+src/se/lab/Main.java:175:	Found 'DD'-anomaly for variable 'stk' (lines '177'-'177').
+src/se/lab/Main.java:175:	Found 'DU'-anomaly for variable 'stk' (lines '177'-'188').
+src/se/lab/Main.java:178:	Local variable 'res' could be declared final
+src/se/lab/Main.java:180:	Potential violation of Law of Demeter (method chain calls)
+src/se/lab/Main.java:180:	Potential violation of Law of Demeter (method chain calls)
+src/se/lab/Main.java:180:	Potential violation of Law of Demeter (method chain calls)
+src/se/lab/Main.java:181:	Avoid appending characters as strings in StringBuffer.append.
+src/se/lab/Main.java:183:	StringBuffer (or StringBuilder).append is called consecutively without reusing the target variable.
+src/se/lab/Main.java:184:	Avoid appending characters as strings in StringBuffer.append.
+src/se/lab/Main.java:188:	Parameter 'graph' is not assigned and could be declared final
+src/se/lab/Main.java:188:	Parameter 'word' is not assigned and could be declared final
+src/se/lab/Main.java:188:	To avoid mistakes add a comment at the beginning of the showAllShortestPath method if you want a default access modifier
+src/se/lab/Main.java:188:	Use explicit scoping instead of the default package private level
+src/se/lab/Main.java:189:	Local variable 'dist' could be declared final
+src/se/lab/Main.java:190:	Local variable 'bfnode' could be declared final
+src/se/lab/Main.java:192:	Found 'DD'-anomaly for variable 'stk' (lines '194'-'201').
+src/se/lab/Main.java:192:	Found 'DU'-anomaly for variable 'stk' (lines '194'-'212').
+src/se/lab/Main.java:193:	Found 'DD'-anomaly for variable 'top' (lines '195'-'198').
+src/se/lab/Main.java:193:	Found 'DU'-anomaly for variable 'top' (lines '195'-'212').
+src/se/lab/Main.java:194:	Local variable 'res' could be declared final
+src/se/lab/Main.java:199:	Found 'DD'-anomaly for variable 'stk' (lines '201'-'201').
+src/se/lab/Main.java:199:	Found 'DU'-anomaly for variable 'stk' (lines '201'-'212').
+src/se/lab/Main.java:203:	Potential violation of Law of Demeter (method chain calls)
+src/se/lab/Main.java:203:	Potential violation of Law of Demeter (method chain calls)
+src/se/lab/Main.java:203:	Potential violation of Law of Demeter (method chain calls)
+src/se/lab/Main.java:204:	Avoid appending characters as strings in StringBuffer.append.
+src/se/lab/Main.java:207:	Avoid appending characters as strings in StringBuffer.append.
+src/se/lab/Main.java:212:	Parameter 'graph' is not assigned and could be declared final
+src/se/lab/Main.java:212:	To avoid mistakes add a comment at the beginning of the randomWalk method if you want a default access modifier
+src/se/lab/Main.java:212:	Use explicit scoping instead of the default package private level
+src/se/lab/Main.java:214:	Local variable 'random' could be declared final
+src/se/lab/Main.java:215:	Avoid variables with short names like u
+src/se/lab/Main.java:215:	Potential violation of Law of Demeter (method chain calls)
+src/se/lab/Main.java:216:	Local variable 'res' could be declared final
+src/se/lab/Main.java:216:	Potential violation of Law of Demeter (object not created locally)
+src/se/lab/Main.java:217:	Avoid variables with short names like e
+src/se/lab/Main.java:217:	Found 'DD'-anomaly for variable 'e' (lines '219'-'224').
+src/se/lab/Main.java:217:	Found 'DU'-anomaly for variable 'e' (lines '219'-'234').
+src/se/lab/Main.java:219:	Potential violation of Law of Demeter (object not created locally)
+src/se/lab/Main.java:222:	Potential violation of Law of Demeter (method chain calls)
+src/se/lab/Main.java:222:	Potential violation of Law of Demeter (method chain calls)
+src/se/lab/Main.java:222:	Potential violation of Law of Demeter (object not created locally)
+src/se/lab/Main.java:222:	Potential violation of Law of Demeter (object not created locally)
+src/se/lab/Main.java:223:	Potential violation of Law of Demeter (object not created locally)
+src/se/lab/Main.java:224:	Avoid appending characters as strings in StringBuffer.append.
+src/se/lab/Main.java:225:	Potential violation of Law of Demeter (object not created locally)
+src/se/lab/Main.java:226:	Potential violation of Law of Demeter (object not created locally)
+src/se/lab/Main.java:229:	Potential violation of Law of Demeter (object not created locally)
+src/se/lab/MyFrame.java:21:	Too many fields
+src/se/lab/MyFrame.java:21:	headerCommentRequirement Required
+src/se/lab/MyFrame.java:23:	Avoid using redundant field initializer for 'th'
+src/se/lab/MyFrame.java:23:	Avoid variables with short names like th
+src/se/lab/MyFrame.java:23:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/se/lab/MyFrame.java:23:	To avoid mistakes add a comment at the beginning of the th field if you want a default access modifier
+src/se/lab/MyFrame.java:23:	Use explicit scoping instead of the default package private level
+src/se/lab/MyFrame.java:23:	fieldCommentRequirement Required
+src/se/lab/MyFrame.java:24:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/se/lab/MyFrame.java:24:	To avoid mistakes add a comment at the beginning of the control field if you want a default access modifier
+src/se/lab/MyFrame.java:24:	Use explicit scoping instead of the default package private level
+src/se/lab/MyFrame.java:24:	fieldCommentRequirement Required
+src/se/lab/MyFrame.java:25:	Avoid using redundant field initializer for 'graph'
+src/se/lab/MyFrame.java:25:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/se/lab/MyFrame.java:25:	To avoid mistakes add a comment at the beginning of the graph field if you want a default access modifier
+src/se/lab/MyFrame.java:25:	Use explicit scoping instead of the default package private level
+src/se/lab/MyFrame.java:25:	fieldCommentRequirement Required
+src/se/lab/MyFrame.java:26:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/se/lab/MyFrame.java:26:	To avoid mistakes add a comment at the beginning of the btnInput field if you want a default access modifier
+src/se/lab/MyFrame.java:26:	Use explicit scoping instead of the default package private level
+src/se/lab/MyFrame.java:26:	fieldCommentRequirement Required
+src/se/lab/MyFrame.java:27:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/se/lab/MyFrame.java:27:	To avoid mistakes add a comment at the beginning of the btnSave field if you want a default access modifier
+src/se/lab/MyFrame.java:27:	Use explicit scoping instead of the default package private level
+src/se/lab/MyFrame.java:27:	fieldCommentRequirement Required
+src/se/lab/MyFrame.java:28:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/se/lab/MyFrame.java:28:	To avoid mistakes add a comment at the beginning of the btnquery field if you want a default access modifier
+src/se/lab/MyFrame.java:28:	Use explicit scoping instead of the default package private level
+src/se/lab/MyFrame.java:28:	fieldCommentRequirement Required
+src/se/lab/MyFrame.java:29:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/se/lab/MyFrame.java:29:	To avoid mistakes add a comment at the beginning of the btngen field if you want a default access modifier
+src/se/lab/MyFrame.java:29:	Use explicit scoping instead of the default package private level
+src/se/lab/MyFrame.java:29:	fieldCommentRequirement Required
+src/se/lab/MyFrame.java:30:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/se/lab/MyFrame.java:30:	To avoid mistakes add a comment at the beginning of the btnpath field if you want a default access modifier
+src/se/lab/MyFrame.java:30:	Use explicit scoping instead of the default package private level
+src/se/lab/MyFrame.java:30:	fieldCommentRequirement Required
+src/se/lab/MyFrame.java:31:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/se/lab/MyFrame.java:31:	To avoid mistakes add a comment at the beginning of the btnrandom field if you want a default access modifier
+src/se/lab/MyFrame.java:31:	Use explicit scoping instead of the default package private level
+src/se/lab/MyFrame.java:31:	fieldCommentRequirement Required
+src/se/lab/MyFrame.java:32:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/se/lab/MyFrame.java:32:	To avoid mistakes add a comment at the beginning of the btnstop field if you want a default access modifier
+src/se/lab/MyFrame.java:32:	Use explicit scoping instead of the default package private level
+src/se/lab/MyFrame.java:32:	fieldCommentRequirement Required
+src/se/lab/MyFrame.java:33:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/se/lab/MyFrame.java:33:	To avoid mistakes add a comment at the beginning of the tfword1 field if you want a default access modifier
+src/se/lab/MyFrame.java:33:	Use explicit scoping instead of the default package private level
+src/se/lab/MyFrame.java:33:	fieldCommentRequirement Required
+src/se/lab/MyFrame.java:34:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/se/lab/MyFrame.java:34:	To avoid mistakes add a comment at the beginning of the tfword2 field if you want a default access modifier
+src/se/lab/MyFrame.java:34:	Use explicit scoping instead of the default package private level
+src/se/lab/MyFrame.java:34:	fieldCommentRequirement Required
+src/se/lab/MyFrame.java:35:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/se/lab/MyFrame.java:35:	To avoid mistakes add a comment at the beginning of the tfres field if you want a default access modifier
+src/se/lab/MyFrame.java:35:	Use explicit scoping instead of the default package private level
+src/se/lab/MyFrame.java:35:	fieldCommentRequirement Required
+src/se/lab/MyFrame.java:36:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/se/lab/MyFrame.java:36:	To avoid mistakes add a comment at the beginning of the lb1 field if you want a default access modifier
+src/se/lab/MyFrame.java:36:	Use explicit scoping instead of the default package private level
+src/se/lab/MyFrame.java:36:	fieldCommentRequirement Required
+src/se/lab/MyFrame.java:37:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/se/lab/MyFrame.java:37:	To avoid mistakes add a comment at the beginning of the lb2 field if you want a default access modifier
+src/se/lab/MyFrame.java:37:	Use explicit scoping instead of the default package private level
+src/se/lab/MyFrame.java:37:	fieldCommentRequirement Required
+src/se/lab/MyFrame.java:38:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/se/lab/MyFrame.java:38:	To avoid mistakes add a comment at the beginning of the lb3 field if you want a default access modifier
+src/se/lab/MyFrame.java:38:	Use explicit scoping instead of the default package private level
+src/se/lab/MyFrame.java:38:	fieldCommentRequirement Required
+src/se/lab/MyFrame.java:39:	Avoid variables with short names like pn
+src/se/lab/MyFrame.java:39:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/se/lab/MyFrame.java:39:	To avoid mistakes add a comment at the beginning of the pn field if you want a default access modifier
+src/se/lab/MyFrame.java:39:	Use explicit scoping instead of the default package private level
+src/se/lab/MyFrame.java:39:	fieldCommentRequirement Required
+src/se/lab/MyFrame.java:40:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/se/lab/MyFrame.java:40:	To avoid mistakes add a comment at the beginning of the pn1 field if you want a default access modifier
+src/se/lab/MyFrame.java:40:	Use explicit scoping instead of the default package private level
+src/se/lab/MyFrame.java:40:	fieldCommentRequirement Required
+src/se/lab/MyFrame.java:46:	Parameter 'name' is not assigned and could be declared final
+src/se/lab/MyFrame.java:70:	Avoid variables with short names like bh
+src/se/lab/MyFrame.java:70:	Local variable 'bh' could be declared final
+src/se/lab/MyFrame.java:124:	Each class should declare at least one constructor
+src/se/lab/MyFrame.java:124:	To avoid mistakes add a comment at the beginning of the MyWindowMonitor nested class if you want a default access modifier
+src/se/lab/MyFrame.java:124:	headerCommentRequirement Required
+src/se/lab/MyFrame.java:125:	Avoid variables with short names like e
+src/se/lab/MyFrame.java:125:	Parameter 'e' is not assigned and could be declared final
+src/se/lab/MyFrame.java:125:	publicMethodCommentRequirement Required
+src/se/lab/MyFrame.java:127:	System.exit() should not be used in J2EE/JEE apps
+src/se/lab/MyFrame.java:131:	Each class should declare at least one constructor
+src/se/lab/MyFrame.java:131:	The class 'MyMonitor' has a Cyclomatic Complexity of 24 (Highest = 23).
+src/se/lab/MyFrame.java:131:	The class 'MyMonitor' has a Modified Cyclomatic Complexity of 18 (Highest = 17).
+src/se/lab/MyFrame.java:131:	The class 'MyMonitor' has a Standard Cyclomatic Complexity of 18 (Highest = 17).
+src/se/lab/MyFrame.java:131:	To avoid mistakes add a comment at the beginning of the MyMonitor nested class if you want a default access modifier
+src/se/lab/MyFrame.java:131:	headerCommentRequirement Required
+src/se/lab/MyFrame.java:132:	Avoid variables with short names like e
+src/se/lab/MyFrame.java:132:	Parameter 'e' is not assigned and could be declared final
+src/se/lab/MyFrame.java:132:	The method 'actionPerformed' has a Cyclomatic Complexity of 23.
+src/se/lab/MyFrame.java:132:	The method 'actionPerformed' has a Modified Cyclomatic Complexity of 17.
+src/se/lab/MyFrame.java:132:	The method 'actionPerformed' has a Standard Cyclomatic Complexity of 17.
+src/se/lab/MyFrame.java:132:	publicMethodCommentRequirement Required
+src/se/lab/MyFrame.java:136:	Potential violation of Law of Demeter (method chain calls)
+src/se/lab/MyFrame.java:137:	Local variable 'jfc' could be declared final
+src/se/lab/MyFrame.java:140:	Local variable 'file' could be declared final
+src/se/lab/MyFrame.java:142:	Potential violation of Law of Demeter (object not created locally)
+src/se/lab/MyFrame.java:144:	Potential violation of Law of Demeter (method chain calls)
+src/se/lab/MyFrame.java:148:	Potential violation of Law of Demeter (method chain calls)
+src/se/lab/MyFrame.java:149:	Local variable 'word1' could be declared final
+src/se/lab/MyFrame.java:150:	Local variable 'word2' could be declared final
+src/se/lab/MyFrame.java:151:	Avoid if (x != y) ..; else ..;
+src/se/lab/MyFrame.java:151:	Potential violation of Law of Demeter (object not created locally)
+src/se/lab/MyFrame.java:151:	Potential violation of Law of Demeter (object not created locally)
+src/se/lab/MyFrame.java:156:	Potential violation of Law of Demeter (method chain calls)
+src/se/lab/MyFrame.java:157:	Local variable 'word1' could be declared final
+src/se/lab/MyFrame.java:158:	Avoid if (x != y) ..; else ..;
+src/se/lab/MyFrame.java:158:	Potential violation of Law of Demeter (object not created locally)
+src/se/lab/MyFrame.java:163:	Potential violation of Law of Demeter (method chain calls)
+src/se/lab/MyFrame.java:164:	Local variable 'word1' could be declared final
+src/se/lab/MyFrame.java:165:	Local variable 'word2' could be declared final
+src/se/lab/MyFrame.java:166:	Avoid if (x != y) ..; else ..;
+src/se/lab/MyFrame.java:166:	Potential violation of Law of Demeter (object not created locally)
+src/se/lab/MyFrame.java:166:	Potential violation of Law of Demeter (object not created locally)
+src/se/lab/MyFrame.java:167:	Local variable 'paths' could be declared final
+src/se/lab/MyFrame.java:170:	Avoid if (x != y) ..; else ..;
+src/se/lab/MyFrame.java:170:	Potential violation of Law of Demeter (object not created locally)
+src/se/lab/MyFrame.java:171:	Local variable 'paths' could be declared final
+src/se/lab/MyFrame.java:177:	Potential violation of Law of Demeter (method chain calls)
+src/se/lab/MyFrame.java:182:	Potential violation of Law of Demeter (method chain calls)
+src/se/lab/MyFrame.java:183:	These nested if statements could be combined
+src/se/lab/MyThread.java:3:	To be compliant to J2EE, a webapp should not use any thread.
+src/se/lab/MyThread.java:3:	headerCommentRequirement Required
+src/se/lab/MyThread.java:5:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/se/lab/MyThread.java:5:	To avoid mistakes add a comment at the beginning of the path field if you want a default access modifier
+src/se/lab/MyThread.java:5:	Use explicit scoping instead of the default package private level
+src/se/lab/MyThread.java:5:	fieldCommentRequirement Required
+src/se/lab/MyThread.java:6:	Avoid variables with short names like fr
+src/se/lab/MyThread.java:6:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/se/lab/MyThread.java:6:	To avoid mistakes add a comment at the beginning of the fr field if you want a default access modifier
+src/se/lab/MyThread.java:6:	Use explicit scoping instead of the default package private level
+src/se/lab/MyThread.java:6:	fieldCommentRequirement Required
+src/se/lab/MyThread.java:7:	Avoid using redundant field initializer for 'stop'
+src/se/lab/MyThread.java:7:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/se/lab/MyThread.java:7:	To avoid mistakes add a comment at the beginning of the stop field if you want a default access modifier
+src/se/lab/MyThread.java:7:	Use explicit scoping instead of the default package private level
+src/se/lab/MyThread.java:7:	fieldCommentRequirement Required
+src/se/lab/MyThread.java:9:	Avoid variables with short names like fr
+src/se/lab/MyThread.java:9:	It is a good practice to call super() in a constructor
+src/se/lab/MyThread.java:9:	Parameter 'fr' is not assigned and could be declared final
+src/se/lab/MyThread.java:9:	Parameter 'path' is not assigned and could be declared final
+src/se/lab/MyThread.java:14:	publicMethodCommentRequirement Required
+src/se/lab/MyThread.java:23:	Found 'UR'-anomaly for variable 's' (lines '23'-'32').
+src/se/lab/MyThread.java:26:	Local variable 'nodes' could be declared final
+src/se/lab/MyThread.java:27:	Potential violation of Law of Demeter (static property access)
+src/se/lab/MyThread.java:28:	Local variable 's' could be declared final
+src/se/lab/MyThread.java:29:	Avoid unnecessary comparisons in boolean expressions
+src/se/lab/MyThread.java:32:	Potential violation of Law of Demeter (static property access)
+src/se/lab/MyThread.java:33:	Potential violation of Law of Demeter (static property access)
+src/se/lab/MyThread.java:37:	An empty statement (semicolon) not part of a loop
+src/se/lab/Vertex.java:3:	headerCommentRequirement Required
+src/se/lab/Vertex.java:4:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/se/lab/Vertex.java:4:	Private field 'name' could be made final; it is only initialized in the declaration or constructor.
+src/se/lab/Vertex.java:4:	fieldCommentRequirement Required
+src/se/lab/Vertex.java:5:	Avoid variables with short names like id
+src/se/lab/Vertex.java:5:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/se/lab/Vertex.java:5:	Private field 'id' could be made final; it is only initialized in the declaration or constructor.
+src/se/lab/Vertex.java:5:	fieldCommentRequirement Required
+src/se/lab/Vertex.java:6:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/se/lab/Vertex.java:6:	fieldCommentRequirement Required
+src/se/lab/Vertex.java:7:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/se/lab/Vertex.java:7:	To avoid mistakes add a comment at the beginning of the vis field if you want a default access modifier
+src/se/lab/Vertex.java:7:	Use explicit scoping instead of the default package private level
+src/se/lab/Vertex.java:7:	fieldCommentRequirement Required
+src/se/lab/Vertex.java:9:	Avoid variables with short names like id
+src/se/lab/Vertex.java:9:	Avoid variables with short names like s
+src/se/lab/Vertex.java:9:	Parameter 'id' is not assigned and could be declared final
+src/se/lab/Vertex.java:9:	Parameter 's' is not assigned and could be declared final
+src/se/lab/Vertex.java:16:	publicMethodCommentRequirement Required
+src/se/lab/Vertex.java:20:	publicMethodCommentRequirement Required
+src/se/lab/Vertex.java:24:	publicMethodCommentRequirement Required
+src/se/lab/Vertex.java:28:	A getX() method which returns a boolean should be named isX()
+src/se/lab/Vertex.java:28:	publicMethodCommentRequirement Required
+src/se/lab/Vertex.java:32:	publicMethodCommentRequirement Required
+src/se/lab/Vertex.java:36:	Avoid variables with short names like s
+src/se/lab/Vertex.java:36:	Parameter 's' is not assigned and could be declared final
+src/se/lab/Vertex.java:36:	publicMethodCommentRequirement Required
+src/se/lab/Vertex.java:41:	publicMethodCommentRequirement Required
+src/se/lab/Vertex.java:46:	Avoid variables with short names like o
+src/se/lab/Vertex.java:46:	Parameter 'o' is not assigned and could be declared final
+src/se/lab/Vertex.java:46:	publicMethodCommentRequirement Required
+src/se/lab/Vertex.java:48:	Avoid variables with short names like v
+src/se/lab/Vertex.java:48:	Local variable 'v' could be declared final
+src/se/lab/Vertex.java:49:	A method should have only one exit point, and that should be the last statement in the method
