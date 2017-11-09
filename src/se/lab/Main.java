@@ -16,7 +16,7 @@ import se.graph.GraphViz;
 public class Main {
   private JFrame myframe = new JFrame("Graph");
   private JLabel mylabel = new JLabel();
-  Graph createDirectedGraph(String filename) throws FileNotFoundException {
+  public Graph createDirectedGraph(String filename) throws FileNotFoundException {
     //filename = "C:\\Users\\pww\\Desktop\\noyte.txt";
     Graph graph = null;
     if(filename!=null) {
@@ -47,7 +47,7 @@ public class Main {
     myframe.pack();
   }
 
-  String queryBridgeWords(Graph graph, String word1, String word2) {
+  public String queryBridgeWords(Graph graph, String word1, String word2) {
     int idu = graph.existNode(word1);
     int idv = graph.existNode(word2);
     if (idu == -1 && idv == -1) {
