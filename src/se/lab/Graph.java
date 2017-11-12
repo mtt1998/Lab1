@@ -131,6 +131,43 @@ public class Graph {
    * @param bfnode ??
    * @return if the way exist
    */
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   public boolean dijkstra(String word, int[] dist, int[] bfnode) {
     int idst = existNode(word);
     if (idst == -1) {

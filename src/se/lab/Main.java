@@ -73,7 +73,7 @@ public class Main {
     }
   }
 
-  String generateNewText(Graph graph, String inputText) {
+  public String generateNewText(Graph graph, String inputText) {
     String[] arr = inputText.split(" ");
     StringBuilder res = new StringBuilder("");
     if (arr != null) {
@@ -137,7 +137,7 @@ public class Main {
     myframe.pack();
   }
 
-  String calcShortestPath(Graph graph, String word1, String word2) {
+  public String calcShortestPath(Graph graph, String word1, String word2) {
     int idst = graph.existNode(word1);
     int idend = graph.existNode(word2);
     if (idend == -1 || idst == -1) {
