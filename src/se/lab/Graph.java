@@ -1,5 +1,6 @@
 package se.lab;
 
+import java.util.Random;
 
 public class Graph {
   int vertexNum;
@@ -131,43 +132,7 @@ public class Graph {
    * @param bfnode ??
    * @return if the way exist
    */
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
   public boolean dijkstra(String word, int[] dist, int[] bfnode) {
     int idst = existNode(word);
     if (idst == -1) {
@@ -200,4 +165,38 @@ public class Graph {
     }
     return true;
   }
+  
+  public String queryBridgeWord(int idu, int idv) {
+      StringBuilder res = new StringBuilder("");
+      for (int i = 0; i < vertexs[idu].getDeg(); i++) {
+        Vertex bridge = edges[idu][i].getTo();
+        for (int j = 0; j < bridge.getDeg(); j++) {
+          if (edges[bridge.getId()][j].getTo().getId() == idv) {
+            res.append(bridge.getName() + " ");
+          }
+        }
+      }
+      return res.toString();
+  }
+  
+  public String randomWalk() {
+	    Random random = new Random();
+	    Vertex u = vertexs[random.nextInt(vertexNum)];
+	    StringBuilder res = new StringBuilder(u.getName());
+	    Edge e = null;
+	    while (true) {
+	      if (u.getDeg() == 0) {
+	        break;
+	      }
+	      e = edges[u.getId()][random.nextInt(u.getDeg())];
+	      u = e.getTo();
+	      res.append(" ");
+	      res.append(u.getName());
+	      if (e.getStatus()) {
+	        break;
+	      }
+	      e.changeStatus(true);
+	    }
+	    return res.toString();
+	  }
 }

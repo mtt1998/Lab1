@@ -16,13 +16,17 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.File;
 import java.io.FileNotFoundException;
+
+import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
+
+import se.graph.GraphViz;
 
 public class MyFrame extends Frame {
   private static final long serialVersionUID = 1L;
   MyThread th = null;
-  Main control = new Main();
   Graph graph = null;
   Button btnInput;
   Button btnSave;
@@ -121,6 +125,7 @@ public class MyFrame extends Frame {
     this.addWindowListener(new MyWindowMonitor());
 
   }
+  
 
   class MyWindowMonitor extends WindowAdapter {
     public void windowClosing(WindowEvent e) {
@@ -141,7 +146,7 @@ public class MyFrame extends Frame {
         File file = jfc.getSelectedFile();
         if (file != null) {
           try {
-            graph = control.createDirectedGraph(file.getAbsolutePath());
+            graph = new CreateGraphControl().createDirectedGraph(file.getAbsolutePath());
           } catch (FileNotFoundException e1) {
             // TODO Auto-generated catch block
             e1.printStackTrace();
@@ -149,20 +154,20 @@ public class MyFrame extends Frame {
         }
       } else if (e.getActionCommand().equals("save")) {
         if (graph != null) {
-          control.showDirectedGraph(graph);
+            new ShowGraphControl().showDirectedGraph(graph);
         }
       } else if (e.getActionCommand().equals("query")) {
         String word1 = tfword1.getText();
         String word2 = tfword2.getText();
         if (graph != null && word1.length() != 0 && word2.length() != 0) {
-          tfres.setText(control.queryBridgeWords(graph, word1, word2));
+          tfres.setText(new QueryWordControl().queryBridgeWords(graph, word1, word2));
         } else {
           tfres.setText("error!");
         }
       } else if (e.getActionCommand().equals("generate")) {
         String word1 = tfword1.getText();
         if (graph != null && word1.length() != 0) {
-          tfres.setText(control.generateNewText(graph, word1));
+          tfres.setText(new GenerateTextControl().generateNewText(graph, word1));
         } else {
           tfres.setText("error!");
         }
@@ -170,19 +175,19 @@ public class MyFrame extends Frame {
         String word1 = tfword1.getText();
         String word2 = tfword2.getText();
         if (graph != null && word1.length() != 0 && word2.length() != 0) {
-          String paths = control.calcShortestPath(graph, word1, word2);
+          String paths = new CalPathControl().calcShortestPath(graph, word1, word2);
           tfres.setText(paths);
-          control.showPathInGraph(graph, paths);
+          new ShowPathControl().showPathInGraph(graph, paths);
         } else if (graph != null && word1.length() != 0) {
-          String paths = control.showAllShortestPath(graph, word1);
+          String paths = new CalPathControl().calcAllShortestPath(graph, word1);
           tfres.setText(paths);
-          control.showPathInGraph(graph, paths);
+          new ShowPathControl().showPathInGraph(graph, paths);
         } else {
           tfres.setText("error!");
         }
       } else if (e.getActionCommand().equals("Random walk")) {
         if (graph != null) {
-          th = new MyThread(MyFrame.this, control.randomWalk(graph));
+          th = new MyThread(MyFrame.this, new RandomWalkControl().randomWalk(graph));
           th.start();
         }
       } else if (e.getActionCommand().equals("stop")) {
@@ -192,4 +197,9 @@ public class MyFrame extends Frame {
       }
     }
   }
+
+  public static void main(String[] args) {
+    new MyFrame("GUI").launchFrame();
+  }
+  
 }
